@@ -11,9 +11,10 @@ class Test(unittest.TestCase):
         self.result = self.app.get('/')
 
     def test_requisicao(self):
-        # compara o status da requisicao (precisa ser igual a 200)
+        # compara o status da requisicao (precisa ser igual a 200) - alterado teste
         self.assertEqual(self.result.status_code, 200)
 
     def test_conteudo(self):
         # verifica o retorno do conteudo da pagina
         self.assertEqual(self.result.data.decode('utf-8'), "Agora Vai, Pai ta On")
+
